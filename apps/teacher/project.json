@@ -1,0 +1,24 @@
+{
+  "name": "teacher",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/teacher/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "teacher:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "teacher:build:development"
+        },
+        "production": {
+          "buildTarget": "teacher:build:production"
+        }
+      }
+    }
+  }
+}

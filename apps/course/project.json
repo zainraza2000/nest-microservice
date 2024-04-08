@@ -1,0 +1,24 @@
+{
+  "name": "course",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/course/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "course:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "course:build:development"
+        },
+        "production": {
+          "buildTarget": "course:build:production"
+        }
+      }
+    }
+  }
+}
